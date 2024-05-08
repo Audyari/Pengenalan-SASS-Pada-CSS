@@ -1,14 +1,215 @@
-Instalasi Sass
+Sass Values
 
-===================
+=====================
 
-1. npm install -g sass
-2. sass --version
+Sass Basics :
 
-Sebagai contoh, jika Anda memiliki file Sass bernama styles.scss, Anda dapat mengompilasinya menjadi file CSS dengan menjalankan perintah berikut di terminal: 
+1. Variables :
 
-3. sass styles.scss styles.css
+Contoh Code Buat index.html :
 
-Anda juga dapat menggunakan fitur watch Sass untuk memantau perubahan di file Sass dan secara otomatis mengompilasinya saat terjadi perubahan. Untuk melakukannya, jalankan perintah berikut:
+<!DOCTYPE html>
+<html lang="en">
 
-4. sass --watch styles.scss styles.css
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>TEST</H1>
+</body>
+
+</html>
+
+============================= FILE SASS : file nya styles.scss
+
+SCSS SYNTAX
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+==================================jangan lupa confert ke sass : 
+
+1. sass styles.scss styles.css
+2. save link css nya : <link rel="stylesheet" href="styles.css">
+
+=======================================
+
+              ================     2. Number di SASS : ============================
+
+=========================index .html nya 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</body>
+</html>
+
+============================== file sass nya styles.scss
+
+$base-font-size: 16px;
+$padding: 20px;
+$opacity: 0.75;
+
+.container {
+  font-size: $base-font-size;
+  padding: $padding;
+  opacity: $opacity;
+  
+  width: $base-font-size * 2; // Perhitungan perkalian
+  height: $base-font-size + $padding; // Perhitungan penjumlahan
+}
+
+
+================================================3. STRING PADA SASS :
+
+index.html 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title"></h1>
+    </header>
+    <button class="button"></button>
+</body>
+
+</html>
+
+=============================styles.scss.
+
+
+$primary-color: "blue";
+$secondary-color: "red";
+
+$font-family: "Arial, sans-serif";
+$font-size: 14px;
+
+.header {
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+.title {
+  font-size: $font-size;
+  content: "Welcome to our website!";
+}
+
+.button {
+  background-color: $secondary-color;
+  padding: 10px;
+  text-align: center;
+
+  &::before {
+    content: "Click me";
+  }
+}
+
+
+==================================================4. COLORING PADA SASS :
+
+index.html 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="text-primary">Heading 1</h1>
+  <h2 class="text-secondary">Heading 2</h2>
+  <div class="background-primary">
+    <p>Primary background color</p>
+  </div>
+  <div class="background-secondary">
+    <p>Secondary background color</p>
+  </div>
+</body>
+</html>
+
+========================styles.scss.
+
+$primary-color: #f00;
+$secondary-color: #00f;
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.background-primary {
+  background-color: $primary-color;
+}
+
+.background-secondary {
+  background-color: $secondary-color;
+}
+
+=========================================
+
+
+SELANJUT NYA LIST CUMA KAGAK JALAN : sudah bisa 
+
+index.html :
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="primary-color">Heading 1</h1>
+  <h2 class="secondary-color">Heading 2</h2>
+  <p class="large-font-size">Lorem ipsum dolor sit amet.</p>
+  <div class="medium-breakpoint">Breakpoint: Medium</div>
+</body>
+</html>
+
+============================styles.scss.
+
+$colors: red, green, blue;
+$font-sizes: 12px, 14px, 16px;
+$breakpoints: 480px, 768px, 1024px;
+
+.primary-color {
+  color: nth($colors, 1);
+}
+
+.secondary-color {
+  color: nth($colors, 2);
+}
+
+.large-font-size {
+  font-size: nth($font-sizes, 3);
+}
+
+.medium-breakpoint {
+  @media (min-width: nth($breakpoints, 2)) {
+    /* Gaya CSS untuk breakpoint medium */
+  }
+}
+
+
+========================================
