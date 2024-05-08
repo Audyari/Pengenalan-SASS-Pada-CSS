@@ -1,13 +1,14 @@
-Berkenalan Dengan Sass Less Stylus
+Instalasi Sass
 
-===================================
+===================
 
-LINK Nya :
+1. npm install -g sass
+2. sass --version
 
-https://sass-lang.com/
+Sebagai contoh, jika Anda memiliki file Sass bernama styles.scss, Anda dapat mengompilasinya menjadi file CSS dengan menjalankan perintah berikut di terminal: 
 
-https://lesscss.org/
+3. sass styles.scss styles.css
 
-https://stylus-lang.com/
+Anda juga dapat menggunakan fitur watch Sass untuk memantau perubahan di file Sass dan secara otomatis mengompilasinya saat terjadi perubahan. Untuk melakukannya, jalankan perintah berikut:
 
-==========================
+4. sass --watch styles.scss styles.css
