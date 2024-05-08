@@ -1,21 +1,13 @@
-Apa Itu Css Preprocessor
+Berkenalan Dengan Sass Less Stylus
 
-==============================
+===================================
 
-CSS preprocessor adalah alat yang digunakan untuk mengembangkan CSS dengan menggunakan fitur tambahan yang tidak ada dalam bahasa CSS asli. 
+LINK Nya :
 
-===============================
+https://sass-lang.com/
 
-Keuntungan menggunakan preprocessor CSS meliputi:
+https://lesscss.org/
 
-1. Efisiensi dan pemeliharaan yang lebih baik: Fitur seperti variabel dan mixin memungkinkan Anda untuk menulis kode yang lebih ringkas dan mudah dipelihara.
-2. Organisasi yang lebih baik: Nesting memungkinkan Anda mengelompokkan aturan CSS yang berkaitan satu sama lain, membuat kode lebih terstruktur dan mudah dibaca.
-3. Dukungan lintas-browser: Preprocessor CSS sering dilengkapi dengan fitur untuk menghasilkan kode CSS yang kompatibel dengan berbagai peramban web.
-4. Ekosistem yang kuat: Preprocessor CSS populer memiliki komunitas yang aktif dan ekosistem alat yang luas, yang berarti ada banyak sumber daya, tutorial, dan plugin yang tersedia.
+https://stylus-lang.com/
 
-
-===================================================
-
-reprocessor CSS seperti Sass (Syntactically Awesome Stylesheets), Less (Leaner CSS), dan Stylus adalah beberapa contoh populer. 
-
-===================================================
+==========================
