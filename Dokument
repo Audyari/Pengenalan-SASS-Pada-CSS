@@ -1,128 +1,50 @@
-Membuat Style Dasar
-======================contoh basic :
+Membuat Navigasi Bar
 
-index.html
+==========================index .html
 
-<!DOCTYPE html>
-<html>
+  <section class="navbar">
+      <a href="#"><img src="images/logo.png" /></a>
+      <div class="right">
+        <a href="#about">About</a>
+        <a href="#product">Our Product</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </section>
 
-<head>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <p>Lorem ipsum dolor sit amet.</p>
-</body>
-
-</html>
-
-=========================== styles.scss
-
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
-
-h1 {
-  color: #ff0000;
-  font-size: 32px;
-}
-
-h2 {
-  color: #00ff00;
-  font-size: 24px;
-}
-
-p {
-  color: #000000;
-}
-
-/*# sourceMappingURL=styles.css.map */
-
-
-===========================================
-
-CONTOH CODE CODEPOLITAN : 
-
-index.html
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <section class="navbar">navbar</section>
-
-    <section class="header">header</section>
-
-    <section class="about">about</section>
-
-    <section class="product">product</section>
-
-    <section class="contact">contact</section>
-
-    <section class="footer">footer</section>
-
-</body>
-
-</html>
-
-===========================================styles.scss
-
-$light-color: #f7fafc;
-$indigo-color: #3c366b;
-$gray-color: #4a5568;
-$red-color: #e74c3c;
-$font-stack: Helvetica, sans-serif;
-
-body {
-  font: 100% $font-stack;
-}
+===========================style.scss
 
 .navbar {
   background-color: $light-color;
   color: $gray-color;
   height: 50px;
-}
+  overflow:hidden;
 
-.header {
-  background-color: $indigo-color;
-  color: $light-color;
-  height: 150px;
-}
+  a{
+    color:$gray-color;
+    float:left;
+    display:block;
+    text-align:center;
+    padding:10px 20px;
+    text-decoration: none;
+    img{
+        height:30px;
+        width:145px;
+    }
+    }
 
-.about {
-  background-color: $light-color;
-  color: $indigo-color;
-  height: 100px;
-}
+    a:hover{
+    background-color: $light-gray;
+    color:$black-color;
+    padding:10px 20px;
+    }
 
-.product {
-  background-color: $red-color;
-  color: $light-color;
-  height: 100px;
-}
-
-.contact {
-  background-color: $light-color;
-  color: $gray-color;
-  height: 100px;
-}
-
-.footer {
-  background-color: $gray-color;
-  color: $light-color;
-  height: 75px;
+    .right{
+        float:right;
+        width:auto;
+        display:block;
+        padding:5px;
+    }
 }
 
 
-==================================================
+=========================================
